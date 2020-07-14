@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <h1>This is my Third Assignment</h1>
+    </head>
+    <body>
+        <div>
+            <p>Current year
+                <span id="wow"></span>
+            </p>
+        </div>
+      <script type="text/javascript">
+      var d = new Date();
+      var month = d.getMonth()+1;
+      var day = d.getDate();
+      var year = d.getFullYear();
+      var str = month + "/" + day + "/" + year;
+      document.getElementById('wow').innerHTML = str;
+    </script>
+    </body>
+</html>

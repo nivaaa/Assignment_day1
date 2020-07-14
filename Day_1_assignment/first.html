@@ -1,0 +1,36 @@
+<html>
+    <head>
+            <h2>This is 1st Assignment</h2>
+    </head>
+
+    <body>
+      
+
+        <div>
+            <!--Its shows a current day-->
+           <p>Today is : <span id="demo"></span></p> 
+           <br>
+           <!--Its shows a current time-->
+           <p>Current time:<span id="time"></span></p>
+        </div>
+        <script type="text/javascript">
+            var d = new Date();
+            //getting a current day
+            var days = [
+                "Sunday" , "Monday" , "Tuesday" , "Wednesday" , "Thursday" , "Friday" , "Saturday"
+            ]
+            document.getElementById("demo").innerHTML = days[d.getDay()];
+            //getting a current time
+            var hours = d.getHours();
+            var minutes = d.getMinutes();
+            var seconds = d.getSeconds();
+            var ampm = hours >= 12 ? 'pm' : 'am';
+            hours = hours % 12;
+            hours = hours ? hours : 12; // the hour '0' should be '12'
+            minutes = minutes < 10 ? '0'+minutes : minutes;
+            var strTime = hours + '' + ampm + ':' + minutes + ' : ' + seconds;
+            document.getElementById('time').innerHTML= strTime;
+            
+            </script>
+    </body>
+</html>
